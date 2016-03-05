@@ -147,19 +147,19 @@ hr.small {
 
 
 .header1 {
-  background-image: image-url("home-bg.jpg") !important;
+  background-image: asset-data-url("home-bg.jpg") !important;
 }
 
 .header2 {
-  background-image: image-url("post-bg-06.jpg");
+  background-image: asset-data-url("post-bg-06.jpg");
 }
 
 .header3 {
-  background-image: image-url("contact-bg.jpg");
+  background-image: asset-data-url("contact-bg.jpg");
 }
 
 .header4 {
-  background-image: image-url("about-bg.jpg");
+  background-image: asset-data-url("about-bg.jpg");
 }
 
 .intro-header .site-heading,
