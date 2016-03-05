@@ -1,0 +1,38 @@
+<header class="intro-header header1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1> My Awesome Blog</h1>
+                    <hr class="small">
+                    <span class="subheading">Steven Goodstein</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      <% @posts.each do |post| %>
+
+      <div class="post-preview">
+          <a href="{{ post.url | prepend: site.baseurl }}">
+            <h2 class="post-title">
+              <%= link_to post.title, post_url(post) %> </h2>
+
+          </a>
+          <p class="post-meta">
+            <%= link_to "Edit Post", edit_post_url(post), method: "get" %> |
+            <%= link_to "Delete Post", post_url(post), method: "delete",
+            data: {confirm: "Do you really want to delete this?"} %> </p>
+        </div>
+        <hr>
+      <% end %>
+
+		</div>
+	</div>
+</div>
